@@ -17,21 +17,31 @@ code {
 .container {
   position: relative;
   display: flex;
+  width: auto;
+  height: auto;
   justify-content: center;
-  margin: 0 auto;
   margin-top: 8rem;
-  background-color: black;
+  background-color: blue;
 }
 
 .sidebar-container {
   height: auto;
-  min-width: 300px;
+  flex: 0 0 250px;
   background-color: orange;
 }
 
 .content-container {
   background-color: green;
-  width: 100%;
-  max-width: 650px;
+  width: 445px;
+  height: auto;
   padding: 0 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .content-container {
+    width: 100%;
+  }
+  .sidebar-container {
+    display: none;
+  }
 }
